@@ -1,0 +1,52 @@
+/* General reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    gap: 0;
+    margin: 50px auto;
+    border: 5px solid #333;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.white {
+    background-color: #f0f0f0;
+}
+
+.square.black {
+    background-color: #333;
+    color: white;
+}
+
+.piece {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Add highlights for selected pieces */
+.selected {
+    border: 2px solid red;
+}
